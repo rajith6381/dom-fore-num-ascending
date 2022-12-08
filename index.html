@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">click</button>
+    <script>
+
+        var btn1 = document.getElementById("btn");
+
+
+        btn1.addEventListener("click", myFun)
+
+
+
+
+        var f = document.createElement("input");
+        document.body.appendChild(f)
+        f.setAttribute("type", "text");
+        f.setAttribute("value", "")
+        f.setAttribute("id", "num1")
+
+
+
+
+        var s = document.createElement("input");
+        document.body.appendChild(s)
+        s.setAttribute("type", "text");
+        s.setAttribute("value", "")
+
+
+        var t = document.createElement("input");
+        document.body.appendChild(t)
+        t.setAttribute("type", "text");
+        t.setAttribute("value", "")
+
+
+
+
+        var f1 = document.createElement("input");
+        document.body.appendChild(f1)
+        f1.setAttribute("type", "text");
+        f1.setAttribute("value", "")
+
+
+
+
+        function myFun() {
+
+            var a = parseInt(f.value)
+            var b = parseInt(s.value)
+            var c = parseInt(t.value)
+            var d = parseInt(f1.value)
+
+
+
+
+            if (b > a && c > a && d > a) {
+                if (c > b && d > b) {
+                    if (c > d) {
+                        console.log(a, b, d, c);
+                    }
+                    else {
+                        console.log(a, b, c, d);
+                    }
+                } else if (b > c && d > c) {
+                    if (b > d) {
+                        console.log(a, c, d, b);
+                    } else {
+                        console.log(a, c, b, d);
+                    }
+                } else {
+                    if (b > c) {
+                        console.log(a, d, c, b);
+                    } else {
+                        console.log(a, d, b, c);
+                    }
+                }
+            } else if (a > b && c > b && d > b) {
+                if (a > c && d > c) {
+                    if (a > d) {
+                        console.log(b, c, d, a);
+                    }
+                    else {
+                        console.log(b, c, a, d);
+                    }
+                } else if (c > a && d > a) {
+                    if (c > d) {
+                        console.log(b, a, d, c);
+                    } else {
+                        console.log(b, a, c, d);
+                    }
+                } else {
+                    if (a > c) {
+                        console.log(b, d, c, a);
+                    } else {
+                        console.log(b, d, a, c);
+                    }
+                }
+            } else if (a > c && b > c && d > c) {
+                if (a > b && d > b) {
+                    if (a > d) {
+                        console.log(c, b, d, a);
+                    }
+                    else {
+                        console.log(c, b, a, d);
+                    }
+                } else if (b > a && d > a) {
+                    if (b > d) {
+                        console.log(c, a, d, b);
+                    } else {
+                        console.log(c, a, b, d);
+                    }
+                } else {
+                    if (a > b) {
+                        console.log(c, d, b, a);
+                    } else {
+                        console.log(c, d, a, b);
+                    }
+                }
+
+            } else {
+                if (b > a && c > a) {
+                    if (b > c) {
+                        console.log(d, a, c, b);
+                    } else {
+                        console.log(d, a, b, c);
+                    }
+                } else if (a > b && c > b) {
+                    if (a > c) {
+                        console.log(d, b, c, a);
+                    } else {
+                        console.log(d, b, a, c);
+                    }
+                } else {
+                    if (b > a) {
+                        console.log(d, c, a, b);
+                    } else {
+                        console.log(d, c, b, a);
+                    }
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
